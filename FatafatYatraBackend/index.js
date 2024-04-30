@@ -17,6 +17,10 @@ mongoose.connect('mongodb://localhost:27017/travellersDB', {
   useUnifiedTopology: true, // This option is no longer needed and can be removed
 });
 
+app.use('/',(req,res)=>{
+  res.send('<CENTER><H1>Backend is Running on Port Jenkins</H1></CENTER>');
+});
+
 // Define MongoDB schema and model
 const profileSchema = new mongoose.Schema({
   username: String,
